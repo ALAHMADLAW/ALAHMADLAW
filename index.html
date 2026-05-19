@@ -404,6 +404,30 @@ html:not(.lang-en) .en{display:none!important;}
   margin-bottom: 15px;
   color: var(--gold);
 }
+/* كود الخريطة الجديد */
+.wa-map-container {
+  margin-top: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+.wa-map-iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  display: block;
+}
+.wa-map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 
 </style>
 </head>
@@ -707,7 +731,11 @@ html:not(.lang-en) .en{display:none!important;}
           <a href="https://goo.gl/maps/MfTRiwobu4a8Zux47?g_st=aw" target="_blank" style="text-decoration:none;"><div class="info-icon" style="cursor:pointer;" title="فتح في خرائط جوجل">📍</div></a>
           <div>
             <div class="info-label ar">العنوان</div><div class="info-label en">Address</div>
-            <div class="info-value ar">سوريا — إدلب — سراقب<br>شارع السوق الشمالي<br>جانب معجنات باريش</div>
+            <div class="info-value ar">سوريا — إدلب — سراقب<br>شارع السوق الشمالي<br>جانب معجنات باريش</div><div class="wa-map-container" onclick="window.open('https://www.google.com/maps?q=35.866998,36.806870', '_blank')">
+  <div class="wa-map-overlay"></div>
+  <iframe class="wa-map-iframe" src="https://maps.google.com/maps?q=35.866998,36.806870&z=16&output=embed" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
             <div class="info-value en">Syria — Idlib — Saraqib<br>North Market Street<br>Next to Barish Pastries</div>
           </div>
         </div>
